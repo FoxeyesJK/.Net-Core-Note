@@ -1,0 +1,10 @@
+AutoMapper: a convention based mapping tool and makes it incredibly easy to map two different object together.
+
+dotnet add package AutoMapper.Extensions.Microsoft.DependencyInjection --version 1.2.0
+dotnet restore
+
+using AutoMapper;
+Dependency Injection
+{
+  services.AddAutoMapper();
+}
