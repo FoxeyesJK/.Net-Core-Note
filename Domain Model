@@ -1,0 +1,17 @@
+
+Domain Model Concept
+
+Problem: Creating a loop in our domain model due to make-vehicle(one to many relationship) and model-vehicle(many to many relationship). However, Relational Database don't like loops
+
+Make    (1) ------- (n) Model
+              -      |
+                -    |
+Feature (n) ------- (n) Vehicle
+
+Solution: Remove make-vehicle relationship because make can be inferred from model. Therefore, model-vehicle becomes one to many relationship due to model-make relationship
+
+Make    (1) ------- (n) Model
+                        (1)
+                         |
+                        (n)
+Feature (n) ------- (n) Vehicle
