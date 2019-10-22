@@ -1,0 +1,24 @@
+
+Dependency Injection
+
+Dependency : Another object that class needs to function
+Class -> uses(Dependency) -> Other Class
+Model -> Fetch(Dependency) -> DB
+
+Injecting Dependencies: 
+* Dependency is pushed into the class from outside
+* Should not intantiate dependencies using new operator inside of class instead use constructor
+
+Dependency Inversion Principle(Lead Soft Dependency)
+Class -> Interface -> Dependency
+   (Dependency)  (Impliments)
+   
+   
+
+
+
+privat readonly VegaDbContext context;
+public MakeController(VegaDbContext context)
+{
+  this.context = context;
+}
