@@ -22,3 +22,13 @@ public MakeController(VegaDbContext context)
 {
   this.context = context;
 }
+
+MyDependency _dependency = new MyDependency();
+Instance Limitation: 
+1. Class must be modified to replace MyDependency instance
+2. Large project with multiple calses depending on MyDependency
+3. Difficult Unit Test
+
+To overcome the limitation using Dependency Injection:
+1. interface or base class to abstract the dependency implementation
+2. Constructor of the class
